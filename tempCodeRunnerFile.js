@@ -52,44 +52,6 @@ const personalMovieDB = {
     },
     writeYourGenres: function() {
         for (let i = 1; i < 4; i++) {
-            let genre = prompt(`Ваш любимый жанр под номером ${i}`, '');
-     
-        if (genre === "" || genre == null) {
-            console.log('Вы ввели некорректные данные или не ввели их вовсе');
-            i--;
-        } else {
-            personalMovieDB.genres[i - 1] = genre;
-        }
-    } 
-        personalMovieDB.genres.forEach((item, i) => {
-            console.log(`Любимый жанр #${i+1} - это (${item})`);
-        });  
-    }
-};
-personalMovieDB.writeYourGenres();
-
-/*writeYourGenres: function() {
-    for (let i = 1; i < 2; i++) {
-        let genres = prompt('Введите ваши любимые жанры через запятую').toLowerCase();
-
-        if (genres === '' || genres == null) {
-            console.log('вы ввели некорректные данные или не ввели их вовсе');
-            i--;
-        } else {
-            personalMovieDB.genres = genres.split(', ');
-            personalMovieDB.genres.sort();
-        } 
-    }
-
-    personalMovieDB.genres.forEach((item, i) => {
-        console.log(`Любимый жанр #${i+1} - это (${item})`);
-    });
-} 
-};
-
-Мой вариант:
-writeYourGenres: function() {
-        for (let i = 1; i < 4; i++) {
             personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`, '');
      
         while (personalMovieDB.genres == "" || personalMovieDB.genres == null) {
@@ -100,4 +62,5 @@ writeYourGenres: function() {
             console.log(`Любимый жанр #${i+1} - это (${item})`);
         });  
     }
-*/
+};
+personalMovieDB.writeYourGenres();
